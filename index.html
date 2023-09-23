@@ -1,0 +1,71 @@
+<html>
+<head>
+    <style>
+        body {
+            background-color: white;
+            color: black;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            text-align: center;
+            font-size: 36px;
+            margin-top: 20px;
+        }
+        p {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        button {
+            display: block;
+            width: 200px;
+            height: 50px;
+            margin: 0 auto;
+            background-color: green;
+            color: white;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+        }
+        form {
+            display: none;
+            width: 300px;
+            margin: 0 auto;
+        }
+        input {
+            display: block;
+            width: 280px;
+            height: 30px;
+            margin: 10px auto;
+            border: 1px solid gray;
+        }
+    </style>
+    <script>
+        function showForm() {
+            var form = document.getElementById("form");
+            var button = document.getElementById("button");
+            form.style.display = "block";
+            button.style.display = "none";
+        }
+
+        function sendOrder() {
+            var phone = document.getElementById("phone").value;
+            var email = document.getElementById("email").value;
+            var type = document.getElementById("type").value;
+
+            // здесь можно добавить код для отправки данных заказа владельцу бота, например, через API телеграма
+        }
+    </script>
+</head>
+<body>
+    <h1>ОНЛАЙН МАГАЗИН</h1>
+    <p>Заказать бота от @front_ist</p>
+    <button id="button" onclick="showForm()">ОФОРМИТЬ</button>
+    <form id="form">
+        <input id="phone" type="tel" placeholder="Телефон" required>
+        <input id="email" type="email" placeholder="Email" required>
+        <input id="type" type="text" placeholder="Тип бота" required>
+        <button onclick="sendOrder()">Заказать</button>
+    </form>
+</body>
+</html>
